@@ -20,8 +20,14 @@
         <p class="lead">Smarter shopping starts here — compare prices, discover deals, and decide with confidence.</p>
 
         <div class="welcome-actions">
-          <button id="start-btn" class="btn primary large">Start Shopping</button>
-          <a href="../product-list.html" class="btn ghost">Browse products</a>
+          <button id="start-btn" class="btn primary large" type="button">Start Shopping</button>
+          <button id="browse-btn" class="btn ghost" type="button">Browse products</button>
+        </div>
+
+        <div class="welcome-search" style="margin-top:16px">
+          <label for="welcome-search-input" class="sr-only">Search products</label>
+          <input id="welcome-search-input" class="input" type="search" placeholder="Search products, e.g. headphones" aria-label="Search products on ShopSmart" />
+          <button id="welcome-search-go" class="btn primary" type="button">Search</button>
         </div>
       </section>
     </main>

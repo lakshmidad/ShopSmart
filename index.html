@@ -3,80 +3,17 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>PriceCompareX — Home</title>
-		<link rel="stylesheet" href="assets/css/global.css" />
-		<link rel="stylesheet" href="assets/css/header.css" />
-		<link rel="stylesheet" href="assets/css/home.css" />
+		<title>ShopSmart</title>
+		<!-- Redirect to welcome page so welcome appears first -->
+		<meta http-equiv="refresh" content="0; url=pages/welcome.html" />
+		<script>
+			// Fallback JS redirect for browsers that ignore meta refresh
+			if (location.pathname === '/' || location.pathname.endsWith('/index.html')) {
+				location.replace('pages/welcome.html');
+			}
+		</script>
 	</head>
 	<body>
-
-		<header class="site-header">
-			<nav class="navbar" role="navigation" aria-label="Main Navigation">
-				<div class="container nav-container">
-					<a class="logo" href="index.html">PriceCompareX</a>
-
-					<form id="site-search" class="site-search" action="product-list.html" method="get">
-						<input id="global-search" name="q" type="search" placeholder="Search for products, brands and more" aria-label="Search products" />
-						<button aria-label="Search">Search</button>
-					</form>
-
-					<div class="nav-actions">
-						<button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle menu">
-							<span class="hamburger" aria-hidden="true"></span>
-						</button>
-
-						<ul class="nav-menu" id="nav-menu">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="product-list.html">Products</a></li>
-							<li><a href="wishlist.html">Wishlist</a></li>
-							<li><a href="cart.html">Cart</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
-
-		<main>
-			<section class="hero hero-landing">
-				<div class="hero-overlay">
-					<div class="container hero-content">
-						<h1 class="hero-title">Smart shopping starts here</h1>
-						<p class="hero-sub">Browse. Compare. Decide — get the best price across stores.</p>
-						<div class="hero-cta">
-							<a class="btn primary large" href="product-list.html">Start Shopping</a>
-							<a class="btn ghost" href="#featured">Explore deals</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="featured" class="featured container">
-				<h2>Featured categories</h2>
-				<div class="category-row">
-					<a class="category-card" href="product-list.html?q=electronics">
-						<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=60&auto=format&fit=crop" alt="Electronics" />
-						<div class="cat-body">Electronics</div>
-					</a>
-					<a class="category-card" href="product-list.html?q=clothes">
-						<img src="https://images.unsplash.com/photo-1521334884684-d80222895322?w=800&q=60&auto=format&fit=crop" alt="Clothes" />
-						<div class="cat-body">Clothing</div>
-					</a>
-					<a class="category-card" href="product-list.html?q=grocery">
-						<img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?w=800&q=60&auto=format&fit=crop" alt="Grocery" />
-						<div class="cat-body">Grocery</div>
-					</a>
-				</div>
-			</section>
-
-			<section class="highlights container">
-				<h2>Top picks for you</h2>
-				<div class="highlight-grid" id="home-products">
-					<!-- JS can inject preview cards here later -->
-				</div>
-			</section>
-		</main>
-
-		<script src="assets/js/app.js"></script>
-		<script src="assets/js/hero.js"></script>
+		<p>If you are not redirected automatically, <a href="pages/welcome.html">click here to open the Welcome page</a>.</p>
 	</body>
 </html>

@@ -139,6 +139,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initial render
+  // If a query param 'q' is present (from welcome search), prefill search and apply filters
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const qParam = params.get('q');
+    if (qParam && searchInput) {
+      searchInput.value = decodeURIComponent(qParam);
+    }
+  } catch (e) {
+    // ignore
+  }
   applyFilters();
 
   // Event listeners
@@ -296,6 +306,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initial render
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const qParam = params.get('q');
+    if (qParam && searchInput) {
+      searchInput.value = decodeURIComponent(qParam);
+    }
+  } catch (e) {}
   applyFilters();
 
   // Event listeners
