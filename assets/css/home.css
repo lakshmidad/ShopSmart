@@ -1,0 +1,4 @@
+/* Home page styles placeholder */
+.hero{padding:48px 0;text-align:center}
+.hero h1{font-size:32px;margin:0 0 12px}
+.hero p{color:var(--muted)}
