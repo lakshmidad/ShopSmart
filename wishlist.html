@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Wishlist — ShopSmart</title>
+		<link rel="stylesheet" href="assets/css/global.css" />
+		<link rel="stylesheet" href="assets/css/header.css" />
+		<link rel="stylesheet" href="assets/css/wishlist-page.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="navbar">
+				<div class="container nav-container">
+					<a class="logo" href="index.html">ShopSmart</a>
+					<ul class="nav-menu">
+						<li><a href="product-list.html">Products</a></li>
+						<li><a href="wishlist.html">Wishlist</a></li>
+						<li><a href="cart.html">Cart</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main class="container">
+			<h1>Your Wishlist</h1>
+			<div id="wishlist-container" class="wishlist-grid" aria-live="polite">
+				<!-- Items will be rendered here -->
+			</div>
+			<p id="empty-msg" class="muted" style="display:none">Your wishlist is empty. Browse products to add items.</p>
+		</main>
+
+		<script src="assets/js/app.js"></script>
+		<script src="scripts/wishlist.js"></script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+/* Wishlist page styles (clean) */
+.wishlist-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:16px;
+  margin-top:12px;
+}
+.wish-card{
+  display:flex;
+  gap:12px;
+  padding:12px;
+  border:1px solid #eee;
+  border-radius:8px;
+  align-items:center;
+  background:#fff;
+}
+.wish-img img{width:120px;height:90px;object-fit:cover;border-radius:6px}
+.wish-body{flex:1}
+.wish-title{margin:0 0 6px;font-size:1rem}
+.wish-actions{margin-top:8px;display:flex;gap:8px}
+.muted{color:#666}
