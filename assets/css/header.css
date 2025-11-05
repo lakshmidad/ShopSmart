@@ -1,8 +1,22 @@
-/* Header / navbar styles (placeholder) */
-.navbar{background:transparent;padding:12px 0}
-.nav-container{display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:700;font-size:20px;color:var(--accent);text-decoration:none}
+/* Header / navbar styles */
+.site-header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));backdrop-filter:blur(6px);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.navbar{padding:12px 0}
+.nav-container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:800;font-size:20px;color:var(--accent);text-decoration:none}
+.site-search{display:flex;flex:1;max-width:640px;margin:0 16px}
+.site-search input{flex:1;padding:10px 12px;border-radius:8px 0 0 8px;border:1px solid #e6e9ef}
+.site-search button{padding:10px 14px;border-radius:0 8px 8px 0;border:1px solid #e6e9ef;background:var(--accent);color:#fff}
+.nav-actions{display:flex;align-items:center;gap:12px}
 .nav-menu{display:flex;gap:12px;list-style:none;padding:0;margin:0}
-.nav-menu a{color:var(--muted);text-decoration:none}
-.nav-toggle{display:none;background:none;border:0}
-@media(max-width:800px){.nav-menu{display:none}.nav-toggle{display:inline-flex}}
+.nav-menu li{display:inline-flex}
+.nav-menu a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:6px}
+.nav-toggle{display:none;background:none;border:0;padding:8px;border-radius:8px}
+.hamburger{width:20px;height:2px;background:var(--muted);display:block;position:relative}
+.hamburger::after,.hamburger::before{content:'';position:absolute;left:0;width:20px;height:2px;background:var(--muted)}
+.hamburger::before{top:-6px}.hamburger::after{top:6px}
+@media(max-width:900px){
+	.site-search{display:none}
+	.nav-menu{display:none;position:absolute;right:16px;top:64px;background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 24px rgba(15,23,42,.12);flex-direction:column}
+	.nav-toggle{display:inline-flex}
+	.nav-menu.open{display:flex}
+}
