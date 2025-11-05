@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
    - Reads window.PRODUCTS (external file)
    - Filters by search and category
    - Sorts by price
-   - Renders product cards
+   - Renders product cards with polished layout
    - Adds wishlist/cart to localStorage
 */
 document.addEventListener('DOMContentLoaded', () => {
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function formatPrice(p) {
-    return '$' + p.toFixed(2);
+    return '$' + Number(p).toFixed(2);
   }
 
   function renderStars(rating) {
@@ -199,8 +199,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('article');
       card.className = 'product-card';
 
+      // guard image
+      const imgSrc = p.image ? p.image : 'https://via.placeholder.com/400x300?text=Product';
+
       card.innerHTML = `
-        <img class="product-image" src="${p.image}" alt="${p.name}" loading="lazy" />
+        <div class="product-image-wrap">
+          <img class="product-image" src="${imgSrc}" alt="${p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Product'" />
+          <button class="icon-btn wishlist-btn" data-id="${p.id}" title="Add to wishlist" aria-label="Add to wishlist">♡</button>
+        </div>
         <div class="product-body">
           <h4 class="product-name">${p.name}</h4>
           <div class="product-meta">
@@ -208,8 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="rating">${renderStars(p.rating)}</div>
           </div>
           <div class="product-actions">
-            <button class="btn small wishlist-btn" data-id="${p.id}">Add to Wishlist</button>
-            <button class="btn small primary cart-btn" data-id="${p.id}">Add to Cart</button>
+            <button class="btn block primary cart-btn" data-id="${p.id}">Add to Cart</button>
           </div>
         </div>
       `;
@@ -218,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     grid.appendChild(frag);
 
-    // wire up buttons
+    // wire up buttons: wishlist (icon) and cart
     grid.querySelectorAll('.wishlist-btn').forEach(btn => btn.addEventListener('click', onWishlist));
     grid.querySelectorAll('.cart-btn').forEach(btn => btn.addEventListener('click', onCart));
   }
@@ -253,12 +258,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const item = products.find(p => p.id === id);
     if (!item) return;
     const list = getStorageArray('wishlist');
+    const btn = e.currentTarget;
     if (!list.find(i => i.id === id)) {
       list.push(item);
       saveToStorage('wishlist', list);
-      e.currentTarget.textContent = 'Added';
+      // toggle icon to filled style
+      btn.classList.add('hearted');
+      btn.innerText = '♥';
+      btn.title = 'Added to wishlist';
     } else {
-      e.currentTarget.textContent = 'Added';
+      // already in wishlist -> remove (toggle)
+      const filtered = list.filter(i => i.id !== id);
+      saveToStorage('wishlist', filtered);
+      btn.classList.remove('hearted');
+      btn.innerText = '♡';
+      btn.title = 'Add to wishlist';
     }
   }
 
@@ -271,8 +285,13 @@ document.addEventListener('DOMContentLoaded', () => {
       list.push(Object.assign({}, item, { qty: 1 }));
       saveToStorage('cart', list);
       e.currentTarget.textContent = 'Added';
+      setTimeout(() => { e.currentTarget.textContent = 'Add to Cart'; }, 1200);
     } else {
+      // increase qty
+      const updated = list.map(i => i.id === id ? Object.assign({}, i, { qty: (i.qty || 1) + 1 }) : i);
+      saveToStorage('cart', updated);
       e.currentTarget.textContent = 'Added';
+      setTimeout(() => { e.currentTarget.textContent = 'Add to Cart'; }, 1200);
     }
   }
 
