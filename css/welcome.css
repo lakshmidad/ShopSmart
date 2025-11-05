@@ -1,0 +1,29 @@
+/* Welcome page styles */
+:root{
+  --accent:#1565c0;
+  --glass: rgba(255,255,255,0.7);
+}
+html,body{height:100%;margin:0}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;background:linear-gradient(180deg,#eef6ff,#f7fbff);color:#07203a}
+.welcome-root{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.bg-anim{position:absolute;inset:0;z-index:0}
+.bubble{position:absolute;border-radius:50%;filter:blur(28px);opacity:0.8}
+.bubble.b1{width:520px;height:520px;background:rgba(21,101,192,0.12);left:-120px;top:-80px;animation:float 8s ease-in-out infinite}
+.bubble.b2{width:420px;height:420px;background:rgba(186,104,200,0.12);right:-100px;top:-40px;animation:float 10s ease-in-out infinite}
+.bubble.b3{width:360px;height:360px;background:rgba(16,185,129,0.08);left:40%;bottom:-140px;animation:float 9s ease-in-out infinite}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(18px)}100%{transform:translateY(0)}}
+
+.welcome-card{position:relative;z-index:2;background:var(--glass);backdrop-filter:blur(6px);padding:44px 34px;border-radius:18px;max-width:760px;text-align:center;box-shadow:0 16px 48px rgba(2,6,23,0.08)}
+.welcome-card h1{font-size:34px;margin:0 0 10px}
+.welcome-card .lead{color:#234;opacity:0.85;margin:0 0 20px}
+.welcome-actions{display:flex;gap:12px;justify-content:center}
+.btn{border-radius:12px;padding:12px 18px;border:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.btn.primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(21,101,192,0.16)}
+.btn.ghost{background:transparent;border:1px solid rgba(2,6,23,0.06);color:#07203a}
+.btn.large{font-size:16px;padding:14px 22px}
+
+@media (max-width:720px){
+  .welcome-card{padding:32px 20px;border-radius:14px;margin:24px}
+  .welcome-card h1{font-size:26px}
+  .welcome-actions{flex-direction:column}
+}
