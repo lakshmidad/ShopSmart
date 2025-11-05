@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ShopSmart — Products</title>
+		<link rel="stylesheet" href="styles/global.css" />
+		<link rel="stylesheet" href="styles/navbar.css" />
+		<link rel="stylesheet" href="styles/product.css" />
+	</head>
+	<body>
+		<header>
+			<nav class="navbar" aria-label="Main navigation">
+				<div class="container nav-container">
+					<a class="logo" href="index.html">ShopSmart</a>
+					<button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="hamburger" aria-hidden="true"></span>
+					</button>
+					<ul class="nav-menu" id="nav-menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="wishlist.html">Wishlist</a></li>
+						<li><a href="cart.html">Cart</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main class="products-page container">
+			<aside class="filters">
+				<div class="filter-block">
+					<h3>Search</h3>
+					<input id="search-input" type="search" placeholder="Search products..." aria-label="Search products" />
+				</div>
+
+				<div class="filter-block">
+					<h3>Category</h3>
+					<label><input type="checkbox" name="category" value="Electronics" checked /> Electronics</label>
+					<label><input type="checkbox" name="category" value="Clothes" checked /> Clothes</label>
+					<label><input type="checkbox" name="category" value="Grocery" checked /> Grocery</label>
+				</div>
+			</aside>
+
+			<section class="content">
+				<div class="controls">
+					<div class="results-count" id="results-count">Showing 0 products</div>
+					<div class="sort">
+						<label for="sort-select">Sort by:</label>
+						<select id="sort-select">
+							<option value="default">Relevance</option>
+							<option value="price-asc">Price: Low to High</option>
+							<option value="price-desc">Price: High to Low</option>
+						</select>
+					</div>
+				</div>
+
+				<div id="product-grid" class="product-grid" aria-live="polite"></div>
+			</section>
+		</main>
+
+		<script src="scripts/products.js"></script>
+		<script src="scripts/product-list.js"></script>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

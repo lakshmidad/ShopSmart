@@ -1,0 +1,8 @@
+/* Header / navbar styles (placeholder) */
+.navbar{background:transparent;padding:12px 0}
+.nav-container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;font-size:20px;color:var(--accent);text-decoration:none}
+.nav-menu{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+.nav-menu a{color:var(--muted);text-decoration:none}
+.nav-toggle{display:none;background:none;border:0}
+@media(max-width:800px){.nav-menu{display:none}.nav-toggle{display:inline-flex}}
