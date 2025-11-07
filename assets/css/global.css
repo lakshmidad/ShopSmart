@@ -1,17 +1,53 @@
 /* Global styles and CSS variables */
 :root{
-  --bg:#f5f7fb;
-  --card:#ffffff;
+  /* Professional blue palette */
+  /* soft vertical blue gradient as the main page background */
+  --bg: linear-gradient(180deg, #eaf4ff 0%, #dfeefc 45%, #e8f6ff 100%);
+  --bg-solid: #eaf4ff; /* fallback solid color */
+  --surface: #ffffff;
   --muted:#6b7280;
-  --accent:#1565c0;
+  --text: #0f1724;
+  --accent:#0b66c2; /* primary brand blue */
+  --accent-600:#095bb0;
+  --accent-700:#084e95;
   --radius:10px;
   --glass: rgba(255,255,255,0.6);
+  /* button variables */
+  --btn-bg: var(--accent);
+  --btn-color: #ffffff;
+  --btn-hover: var(--accent-600);
+  --surface-border: rgba(15,23,42,0.06);
+  --card-shadow: 0 8px 24px rgba(15,23,42,0.06);
+  --card-shadow-strong: 0 18px 40px rgba(15,23,42,0.10);
+  /* complementary accents for decorative elements */
+  --accent-2: #dff4ff; /* very light sky */
+  --accent-3: #9fd6c8; /* soft teal */
+  --accent-4: #d8ccff; /* soft lavender */
 }
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background:var(--bg);color:#111;line-height:1.4;
+  background:var(--bg);color:var(--text);line-height:1.4;
 }
 .container{max-width:1200px;margin:0 auto;padding:0 16px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Global button defaults — pages may override specifics but will inherit these variables */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  padding:10px 14px;
+  border:1px solid transparent;
+  cursor:pointer;
+  background:var(--btn-bg);
+  color:var(--btn-color);
+  transition:transform .12s ease, background .12s ease, box-shadow .12s ease;
+}
+.btn:hover{background:var(--btn-hover);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(15,23,42,0.06)}
+.btn.primary{background:var(--accent);color:var(--btn-color);box-shadow:0 8px 24px rgba(11,102,194,0.12)}
+.btn.large{padding:12px 20px;font-size:16px}
+

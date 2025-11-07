@@ -1,13 +1,7 @@
 /* Modern product listing styles (polished card UI) */
-:root{
-  --accent:#1565c0;
-  --muted:#64748b;
-  --bg:#f3f6fb;
-  --card:#ffffff;
-  --radius:12px;
-}
+/* Use global variables defined in assets/css/global.css for colors and background */
 html,body{height:100%}
-body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); color:#0f172a}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); color:var(--text)}
 .container{max-width:1180px;margin:0 auto;padding:0 18px}
 
 .products-page{display:flex;gap:24px;padding:28px 0}

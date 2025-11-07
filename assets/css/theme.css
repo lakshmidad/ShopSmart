@@ -1,0 +1,24 @@
+/* Theme overrides to enforce the blue-shaded palette across pages */
+body{background:var(--bg);background-repeat:no-repeat;background-attachment:fixed}
+
+/* Buttons: ensure primary/ghost look consistent */
+.btn{border-radius:10px;padding:10px 14px}
+.btn.primary{background:var(--accent)!important;color:var(--btn-color)!important;border-color:var(--accent-600)!important;box-shadow:var(--card-shadow-strong)!important}
+.btn.ghost{background:transparent!important;border:1px solid var(--surface-border)!important;color:var(--text)!important}
+
+/* Hero tweaks */
+.hero-landing{background-image:radial-gradient(circle at 10% 20%, rgba(11,102,194,0.06) 0%, transparent 25%), radial-gradient(circle at 90% 10%, rgba(210,180,255,0.04) 0%, transparent 22%), linear-gradient(180deg, rgba(234,244,255,1) 0%, rgba(223,238,252,1) 45%, rgba(232,246,255,1) 100%)}
+.hero-content{box-shadow:var(--card-shadow);border-radius:14px}
+
+/* Cards and tiles */
+.category-card, .product-card{background:var(--surface);box-shadow:var(--card-shadow);border-radius:var(--radius)}
+.product-image-wrap{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(234,244,255,0.3))}
+
+/* Subtle accent for badges */
+.product-badge{background:rgba(11,102,194,0.06);color:var(--text)}
+
+/* Ensure form controls match theme */
+input[type=search], .site-search input{border:1px solid var(--surface-border);border-radius:8px;padding:8px}
+
+/* Make sure override specificity is strong where needed */
+.product-actions .btn.block{background:var(--accent);color:var(--btn-color)}
