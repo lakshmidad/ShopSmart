@@ -1,25 +1,41 @@
-# PriceCompareX (scaffold)
+# 🛒 ShopSmart
 
-This repository contains a frontend scaffold for the PriceCompareX project.
+## A Smart Frontend Shopping Application (HTML | CSS | JavaScript)
 
-Quick start:
+ShopSmart is a modern e-commerce web application built using only pure frontend technologies (HTML, CSS, JavaScript).
+It provides a smooth online shopping experience with a smart onboarding flow, a responsive product catalog, and 1000+ products to explore.
 
-1. Open the project folder in your editor.
-2. Serve files using a simple static server (or open `index.html` in the browser).
+✅ Features
 
-Example (PowerShell) to start a quick server if you have Python:
+⭐ Welcome Page & Onboarding Flow
 
-```powershell
-python -m http.server 5500
-# then open http://localhost:5500/index.html
-```
+Choose categories & preferences before entering the app
 
-Branch workflow:
+🛍️ Product Listing (1000+ products)
 
-- Create feature branches named `feature/<feature-name>` (e.g. `feature/layout-setup`).
+Grid view with responsive layout (desktop / tablet / mobile)
 
-This commit added the scaffold. Next: implement the landing page UI.
-## ShopSmart
-Browse. Compare. Decide — all in one place.
-This is my frontend project 
+🔍 Smart Search + Filters
 
+Search by product name
+
+Filter by brand / category / price range
+
+❤️ Add to Wishlist
+
+Saved using localStorage
+
+🛒 Shopping Cart
+
+Items persist even after page reload
+
+🌓 Responsive & User-Friendly UI
+
+Looks like a real e-commerce app
+
+🔧 Tech Stack
+Technology	Usage
+HTML5	Structure + pages
+CSS3 / Flexbox / Grid	Styling + responsive design
+Vanilla JavaScript (ES6)	Logic, dynamic rendering, localStorage
+localStorage	Persist cart & wishlist data
