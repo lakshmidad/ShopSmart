@@ -1,1 +1,221 @@
-[]
+[
+  {
+    "id": "CL001",
+    "name": "Essential Cotton T-Shirt",
+    "category": "Clothing",
+    "subcategory": "T-shirts",
+    "brand": "ComfortWear",
+    "price": 24.99,
+    "rating": 4.5,
+    "image": "assets/images/clothing/tshirt-basic.jpg",
+    "description": "Premium cotton t-shirt with a comfortable fit",
+    "specs": {
+      "material": "100% Organic Cotton",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["White", "Black", "Navy", "Gray"]
+    },
+    "inStock": true,
+    "discount": 0
+  },
+  {
+    "id": "CL002",
+    "name": "Performance Athletic Socks (6-Pack)",
+    "category": "Clothing",
+    "subcategory": "Socks",
+    "brand": "SportFit",
+    "price": 19.99,
+    "rating": 4.7,
+    "image": "assets/images/clothing/athletic-socks.jpg",
+    "description": "Moisture-wicking athletic socks for maximum comfort",
+    "specs": {
+      "material": "Polyester Blend",
+      "sizes": ["S", "M", "L"],
+      "colors": ["White", "Black", "Mixed"]
+    },
+    "inStock": true,
+    "discount": 15
+  },
+  {
+    "id": "CL003",
+    "name": "Tactical Cargo Pants",
+    "category": "Clothing",
+    "subcategory": "Pants",
+    "brand": "UrbanTactical",
+    "price": 59.99,
+    "rating": 4.6,
+    "image": "assets/images/clothing/cargo-pants.jpg",
+    "description": "Durable cargo pants with multiple pockets",
+    "specs": {
+      "material": "Ripstop Cotton",
+      "sizes": ["30", "32", "34", "36", "38"],
+      "colors": ["Khaki", "Olive", "Black"]
+    },
+    "inStock": true,
+    "discount": 0
+  },
+  {
+    "id": "HB001",
+    "name": "Vitamin C Face Wash",
+    "category": "Health & Beauty",
+    "subcategory": "Skincare",
+    "brand": "PureSkin",
+    "price": 22.99,
+    "rating": 4.8,
+    "image": "assets/images/beauty/face-wash.jpg",
+    "description": "Brightening face wash with natural Vitamin C",
+    "specs": {
+      "size": "150ml",
+      "skinType": "All Skin Types",
+      "ingredients": ["Vitamin C", "Aloe Vera", "Green Tea"]
+    },
+    "inStock": true,
+    "discount": 0
+  },
+  {
+    "id": "HB002",
+    "name": "Plant-Based Protein Powder",
+    "category": "Health & Beauty",
+    "subcategory": "Supplements",
+    "brand": "VitaWell",
+    "price": 39.99,
+    "rating": 4.5,
+    "image": "assets/images/beauty/protein-powder.jpg",
+    "description": "Vegan protein powder with complete amino profile",
+    "specs": {
+      "size": "1kg",
+      "flavor": ["Vanilla", "Chocolate", "Berry"],
+      "servings": 30
+    },
+    "inStock": true,
+    "discount": 10
+  },
+  {
+    "id": "EL001",
+    "name": "Smart Surge Protector",
+    "category": "Electronics",
+    "subcategory": "Power Protection",
+    "brand": "TechShield",
+    "price": 34.99,
+    "rating": 4.9,
+    "image": "assets/images/electronics/surge-protector.jpg",
+    "description": "8-outlet surge protector with smart features",
+    "specs": {
+      "outlets": 8,
+      "usbPorts": 4,
+      "cableLength": "6ft",
+      "protection": "4000 Joules"
+    },
+    "inStock": true,
+    "discount": 0
+  },
+  {
+    "id": "EL002",
+    "name": "Universal Travel Adapter",
+    "category": "Electronics",
+    "subcategory": "Travel Accessories",
+    "brand": "WorldConnect",
+    "price": 29.99,
+    "rating": 4.7,
+    "image": "assets/images/electronics/travel-adapter.jpg",
+    "description": "All-in-one travel adapter with USB ports",
+    "specs": {
+      "compatibility": "150+ countries",
+      "usbPorts": ["2x USB-A", "1x USB-C"],
+      "maxWattage": "1380W"
+    },
+    "inStock": true,
+    "discount": 5
+  },
+  {
+    "id": "HK001",
+    "name": "Premium Stand Mixer",
+    "category": "Home & Kitchen",
+    "subcategory": "Appliances",
+    "brand": "KitchenPro",
+    "price": 299.99,
+    "rating": 4.8,
+    "image": "assets/images/kitchen/stand-mixer.jpg",
+    "description": "Professional-grade stand mixer with multiple attachments",
+    "specs": {
+      "power": "600W",
+      "capacity": "5L",
+      "speeds": 10,
+      "attachments": ["Whisk", "Dough Hook", "Beater"]
+    },
+    "inStock": true,
+    "discount": 15
+  },
+  {
+    "id": "HK002",
+    "name": "Vacuum Insulated Tumbler",
+    "category": "Home & Kitchen",
+    "subcategory": "Drinkware",
+    "brand": "ThermoKeep",
+    "price": 29.99,
+    "rating": 4.9,
+    "image": "assets/images/kitchen/tumbler.jpg",
+    "description": "Double-wall vacuum insulated stainless steel tumbler",
+    "specs": {
+      "capacity": "30oz",
+      "material": "18/8 Stainless Steel",
+      "colors": ["Silver", "Black", "Navy"],
+      "features": ["Leak-proof", "Sweat-free"]
+    },
+    "inStock": true,
+    "discount": 0
+  },
+  {
+    "id": "TN001",
+    "name": "Personalized Phone Case",
+    "category": "Trending",
+    "subcategory": "Custom Products",
+    "brand": "CustomCase",
+    "price": 24.99,
+    "rating": 4.6,
+    "image": "assets/images/trending/phone-case.jpg",
+    "description": "Custom phone case with your design or photo",
+    "specs": {
+      "compatibility": ["iPhone 13/14/15", "Samsung S22/S23"],
+      "material": "Impact-resistant plastic",
+      "customization": "Full color printing"
+    },
+    "inStock": true,
+    "discount": 0
+  },
+  {
+    "id": "TN002",
+    "name": "Eco-Friendly Water Bottle",
+    "category": "Trending",
+    "subcategory": "Sustainable Products",
+    "brand": "EcoLife",
+    "price": 34.99,
+    "rating": 4.8,
+    "image": "assets/images/trending/water-bottle.jpg",
+    "description": "Sustainable water bottle made from recycled materials",
+    "specs": {
+      "capacity": "750ml",
+      "material": "Recycled Stainless Steel",
+      "features": ["BPA-free", "Insulated"]
+    },
+    "inStock": true,
+    "discount": 0
+  },
+  {
+    "id": "TN003",
+    "name": "Luxury Bath Bombs Set",
+    "category": "Trending",
+    "subcategory": "Handmade",
+    "brand": "ArtisanSpa",
+    "price": 29.99,
+    "rating": 4.7,
+    "image": "assets/images/trending/bath-bombs.jpg",
+    "description": "Handcrafted bath bombs with essential oils",
+    "specs": {
+      "quantity": "6 pieces",
+      "ingredients": ["Natural oils", "Organic colors"],
+      "scents": ["Lavender", "Rose", "Eucalyptus"]
+    },
+    "inStock": true,
+    "discount": 10
+  }
+]
